@@ -3,16 +3,27 @@
     "name": "Better Twitch",
     "description": "An extension to make Twitch better.",
     "version": "1.0",
-    "content_scripts": [{
-        "matches": ["http://www.twitch.tv/*", "https://www.twitch.tv/*"],
-        "js": ["js/content.js"],
-        "css": ["css/content.css"]
-    }],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.twitch.tv/*"
+            ],
+            "js": [
+                "js/content.js"
+            ],
+            "css": [
+                "css/content.css"
+            ]
+        }
+    ],
     "action": {
         "default_icon": "img/icon.png",
         "default_popup": "popup.html"
     },
     "icons": {
         "128": "img/icon.png"
-    }
+    },
+    "host_permissions": [
+        "https://www.twitch.tv/*"
+    ]
 }
